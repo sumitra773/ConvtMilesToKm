@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:text="Hello World!"
+        android:maxLines="5"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_miles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_display"
+        app:layout_constraintEnd_toStartOf="@+id/et_miles"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Miles"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et_miles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_miles"
+        app:layout_constraintTop_toBottomOf="@id/tv_display"/>
+
+    <TextView
+        android:id="@+id/tv_km"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_miles"
+        app:layout_constraintEnd_toStartOf="@+id/et_km"
+        android:padding="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Km"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et_km"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_km"
+        app:layout_constraintTop_toBottomOf="@id/et_miles"/>
+
+    <Button
+        android:id="@+id/btn_convert_miles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="convert miles to km"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_convert_km"/>
+
+    <Button
+        android:id="@+id/btn_convert_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="convert km to miles"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
